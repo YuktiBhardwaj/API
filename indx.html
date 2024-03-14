@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI Chat</title>
+</head>
+<body>
+    <h1>OpenAI Chat</h1>
+    <!-- Form for users to input their prompt -->
+    <form method="POST">
+        <label for="user_input">Enter your prompt:</label><br>
+        <!-- Textarea for users to input their prompt -->
+        <textarea id="user_input" name="user_input" rows="4" cols="50"></textarea><br>
+        <!-- Submit button to submit the form -->
+        <input type="submit" value="Submit">
+    </form>
+    <!-- Display user's prompt and OpenAI's response if available -->
+    {% if user_input %}
+        <h2>Your Prompt:</h2>
+        <p>{{ user_input }}</p>
+        <h2>OpenAI Response:</h2>
+        <p>{{ response }}</p>
+    {% endif %}
+</body>
+</html>
